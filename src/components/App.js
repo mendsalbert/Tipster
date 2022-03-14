@@ -35,12 +35,39 @@ class App extends Component {
     const accounts = await web3.eth.getAccounts()
     this.setState({ account: accounts[0] })
 
+    //Network ID
+    const networkId = await web3.eth.net.getId()
+    const networkData = Decentragram.networks[networkId]
+    if(networkData) {
+      const decentragram = new web3.eth.Contract(Decentragram.abi, networkData.address)
+      this.setState({ decentragram })
+      const imagesCount = await decentragram.methods.imageCount().call()
+      this.setState({ imagesCount })
+      // Load images
+      for (var i = 1; i <= imagesCount; i++) {
+        const image = await decentragram.methods.images(i).call()
+        this.setState({
+          images: [...this.state.images, image]
+        })
+      }
+      // Sort images. Show highest tipped images first
+      this.setState({
+        images: this.state.images.sort((a,b) => b.tipAmount - a.tipAmount )
+      })
+      this.setState({ loading: false})
+    } else {
+      window.alert('Decentragram contract not deployed to detected network.')
+    }
+
   }
 
   constructor(props) {
     super(props)
     this.state = {
       account: '',
+      decentragram: null,
+      images: [],
+      loading: true
     }
   }
 
