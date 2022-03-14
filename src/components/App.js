@@ -12,6 +12,7 @@ class App extends Component {
 
   async componentWillMount() {
     await this.loadWeb3()
+    await this.loadBlockchaindata()
   }
 
   async loadWeb3() {
@@ -25,6 +26,15 @@ class App extends Component {
     else {
       window.alert('Non-Ethereum browser detected. You should consider trying MetaMask!')
     }
+  }
+
+  async loadBlockchaindata() {
+    const web3 = window.web3
+
+    //load accounts
+    const accounts = await web3.eth.getAccounts()
+    this.setState({ account: accounts[0] })
+
   }
 
   constructor(props) {
