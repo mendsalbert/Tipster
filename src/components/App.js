@@ -1,20 +1,20 @@
-import React, { Component } from 'react';
-import Web3 from 'web3';
-import Identicon from 'identicon.js';
-import './App.css';
 import Decentragram from '../abis/Decentragram.json'
+import React, { Component } from 'react';
+import Identicon from 'identicon.js';
 import Navbar from './Navbar'
 import Main from './Main'
+import Web3 from 'web3';
+import './App.css';
 
 //Declare IPFS
 const ipfsClient = require('ipfs-http-client')
-const ipfs = ipfsClient({ host: 'ipfs.infura.io', port: 5001, protocol: 'https' })
+const ipfs = ipfsClient({ host: 'ipfs.infura.io', port: 5001, protocol: 'https' }) // leaving out the arguments will default to these values
 
 class App extends Component {
 
   async componentWillMount() {
     await this.loadWeb3()
-    await this.loadBlockchaindata()
+    await this.loadBlockchainData()
   }
 
   async loadWeb3() {
@@ -30,14 +30,12 @@ class App extends Component {
     }
   }
 
-  async loadBlockchaindata() {
+  async loadBlockchainData() {
     const web3 = window.web3
-
-    //load accounts
+    // Load account
     const accounts = await web3.eth.getAccounts()
     this.setState({ account: accounts[0] })
-
-    //Network ID
+    // Network ID
     const networkId = await web3.eth.net.getId()
     const networkData = Decentragram.networks[networkId]
     if(networkData) {
@@ -60,7 +58,6 @@ class App extends Component {
     } else {
       window.alert('Decentragram contract not deployed to detected network.')
     }
-
   }
 
   captureFile = event => {
@@ -94,6 +91,13 @@ class App extends Component {
     })
   }
 
+  tipImageOwner(id, tipAmount) {
+    this.setState({ loading: true })
+    this.state.decentragram.methods.tipImageOwner(id).send({ from: this.state.account, value: tipAmount }).on('transactionHash', (hash) => {
+      this.setState({ loading: false })
+    })
+  }
+
   constructor(props) {
     super(props)
     this.state = {
@@ -102,6 +106,10 @@ class App extends Component {
       images: [],
       loading: true
     }
+
+    this.uploadImage = this.uploadImage.bind(this)
+    this.tipImageOwner = this.tipImageOwner.bind(this)
+    this.captureFile = this.captureFile.bind(this)
   }
 
   render() {
@@ -114,8 +122,9 @@ class App extends Component {
               images={this.state.images}
               captureFile={this.captureFile}
               uploadImage={this.uploadImage}
+              tipImageOwner={this.tipImageOwner}
             />
-          }
+        }
       </div>
     );
   }
