@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
 import Identicon from 'identicon.js';
-import photo from '../photo.png'
+import photo from '../photo.png';
+import Menu from './Menu';
 
 class Navbar extends Component {
 
   render() {
+
+
     return (
       <nav className="navbar navbar-dark fixed-top bg-white flex-md-nowrap p-0 shadow">
-        <a
+       <Menu />
+        {/* <a
           className="navbar-brand col-sm-3 col-md-2 mr-0"
           href="http://www.dappuniversity.com/bootcamp"
           target="_blank"
@@ -15,7 +19,7 @@ class Navbar extends Component {
         >
           <img src={photo} width="30" height="30" className="d-inline-block align-top" alt="" />
           <small className='text-dark'>Gram</small>
-        </a>
+        </a> */}
         <ul className="navbar-nav px-3">
           <li className="nav-item text-nowrap d-none d-sm-none d-sm-block">
             { this.props.account
@@ -24,6 +28,7 @@ class Navbar extends Component {
                 width='30'
                 height='30'
                 src={`data:image/png;base64,${new Identicon(this.props.account, 30).toString()}`}
+                alt='identicon'
               />
               : <span></span>
             }

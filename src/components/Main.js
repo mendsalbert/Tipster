@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Identicon from 'identicon.js';
+import * as FaIcons from 'react-icons/fa';
+import CommentModal from './CommentModal';
 
 class Main extends Component {
 
@@ -7,7 +9,7 @@ class Main extends Component {
     return (
       <div className="container-fluid bg-dark mt-3">
         <div className="row">
-          <main role="main" className="col-lg-12 ml-auto mr-auto" style={{ maxWidth: '500px' }}>
+          <main role="main" className="col-lg-12 ml-auto mr-auto" style={{ maxWidth: '700px' }}>
             <div className="content mr-auto ml-auto">
             <p>&nbsp;</p>
               <h2 className='text-white'>Share Post</h2>
@@ -16,7 +18,9 @@ class Main extends Component {
                 const description = this.imageDescription.value
                 this.props.uploadImage(description)
               }} >
-                <input type='file' accept=".jpg, .jpeg, .png, .bmp, .gif" onChange={this.props.captureFile} />
+              <FaIcons.FaImage size={50} className='shadow p-3 mb-3 mr-3' color='#fff' />
+              <FaIcons.FaVideo size={50} className='shadow p-3 mb-3 mr-3' color='#fff' />
+              <input type='file' accept=".jpg, .jpeg, .png, .bmp, .gif, .mp4, .mkv .ogg .wmv" onChange={this.props.captureFile} />
                   <div className="form-group mr-sm-2">
                     <br></br>
                       <input
@@ -27,9 +31,10 @@ class Main extends Component {
                         placeholder="Caption ..."
                         required />
                   </div>
-                <button type="submit" class="btn btn-success btn-block btn-lg">Post</button>
+                <button type="submit" className="btn btn-success btn-block btn-lg">Post</button>
               </form>
               <p>&nbsp;</p>
+              
               { this.props.images.map((image, key) => {
                 return(
                   <div className="card mb-4" key={key} >
@@ -39,18 +44,23 @@ class Main extends Component {
                         width='30'
                         height='30'
                         src={`data:image/png;base64,${new Identicon(image.author, 30).toString()}`}
+                        alt='identicon'
                       />
                       <small className="text-muted">{image.author}</small>
                     </div>
                     <ul id="imageList" className="list-group list-group-flush">
                       <li className="list-group-item">
-                        <p class="text-center"><img src={`https://ipfs.infura.io/ipfs/${image.hash}`} style={{ maxWidth: '420px'}}/></p>
+                        <div className="text-center">
+                          <iframe src={`https://ipfs.infura.io/ipfs/${image.hash}`} 
+                       ></iframe></div>
                         <p>{image.description}</p>
                       </li>
                       <li key={key} className="list-group-item py-2">
                         <small className="float-left mt-1 text-muted">
                           TIPS: {window.web3.utils.fromWei(image.tipAmount.toString(), 'Ether')} ETH
                         </small>
+                          <CommentModal />
+                        <FaIcons.FaShare size={18} className="pt-1 ml-2" color='#00b761' />
                         <button
                           className="btn btn-link btn-sm float-right pt-0"
                           name={image.id}
@@ -67,7 +77,6 @@ class Main extends Component {
                   </div>
                 )
               })}
-
             </div>
           </main>
         </div>

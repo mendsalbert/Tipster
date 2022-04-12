@@ -1,1 +1,30 @@
 /* Styles go here */
+iframe {
+    display: block;
+    background: #000;
+    border: none;
+    height: calc(100vh - 30px);
+    width: 100%;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #fff;
+  }
+  
+  
+  li a {
+    display: block;
+    color: #333333;
+    padding: 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: #00b761;
+    color: #fff;
+    text-decoration: none;
+  }
