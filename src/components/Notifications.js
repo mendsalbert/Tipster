@@ -12,7 +12,7 @@ class Notifications extends Component {
 
               <div className="col-lg-12 mb-4 mt-5" >
               <div className="card-header">
-
+              <p>No Notification</p>
               </div>
               </div>
       </div>

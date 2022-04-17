@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Identicon from 'identicon.js';
-import photo from '../photo.png';
 import Menu from './Menu';
 
 class Navbar extends Component {

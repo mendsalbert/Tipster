@@ -2,6 +2,7 @@ import React from 'react';
 import photo from '../photo.png';
 import * as FaIcons from 'react-icons/fa';
 import * as IoIcons from 'react-icons/io';
+import { Link } from "react-router-dom";
 
 const Menu = () => {
 
@@ -14,7 +15,7 @@ return (
             <div className="offcanvas-header">
                 <h5 className="offcanvas-title" id="offcanvasWithBothOptionsLabel"><a
           className="navbar-brand col-sm-3 col-md-2 mr-0"
-          href="http://www.dappuniversity.com/bootcamp"
+          href="/home"
           target="_blank"
           rel="noopener noreferrer"
         >

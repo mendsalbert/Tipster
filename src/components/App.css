@@ -28,3 +28,9 @@ ul {
     color: #fff;
     text-decoration: none;
   }
+
+  .headerContain {
+    display:flex;
+    flex-direction: row;
+    margin-top: 10px;
+  }

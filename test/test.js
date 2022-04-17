@@ -64,6 +64,7 @@ contract('Decentragram', ([deployer, author, tipper]) => {
       assert.equal(image.author, author, 'author is correct')
     })
 
+
     it('allows users to tip images', async () => {
       // Track the author balance before purchase
       let oldAuthorBalance
