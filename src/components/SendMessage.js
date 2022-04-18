@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { useMoralis } from "react-moralis";
+import { FormControl, Button } from "react-bootstrap";
+import * as IoIcons from 'react-icons/io';
 
 function SendMessage({endOfMessagesRef}) {
   const { user, Moralis } = useMoralis();
@@ -12,6 +14,7 @@ function SendMessage({endOfMessagesRef}) {
       messages
       .save({
           message:message,
+          username:user.getUsername(),
           ethAddress:user.get('ethAddress'),
       })
       .then((message)=>{
@@ -24,16 +27,42 @@ function SendMessage({endOfMessagesRef}) {
 setMessage("");
   }
   return (
-    <form className="flex fixed opacity-80 px-6 py-4 max-w-2xl shadow-xl rounded-xl border-2 border-sky-300 bottom-10 bg-black  w-11/12">
-      <input
-        className=" flex-grow outline-none pr-5 bg-transparent text-gray-100  placeholder-sky-200"
-        type="text"
-        value={message}
-        onChange={(e)=>setMessage(e.target.value)}
-        placeholder='Enter a Message'
-      />
-      <button type="submit" onClick={sendMessage} className="font-bold text-sky-500">Send</button>
-    </form>
+    <div className="row">
+    <main role="main" className="col-lg-12 ml-auto mr-auto" style={{ maxWidth: '700px' }}>
+    <div className="content mr-auto ml-auto">
+    <div className="col-lg-12 p-3 m-auto mb-3">
+        <div className="d-flex">
+        <FormControl
+            className="me-2"
+            type="text"
+            as="textarea" rows={1}
+             value={message}
+            onChange={(e)=>setMessage(e.target.value)}
+            placeholder={`Enter a Message ${user.getUsername()}`}
+        />
+        <Button
+            variant="outline-success"
+            type="submit" onClick={sendMessage}
+        >
+            <IoIcons.IoMdSend size={23} />
+        </Button>
+        </div>
+    </div>
+
+    </div>
+    </main>
+    </div>
+    // <form className="" align='center'>
+    //   <input
+    //     className=" flex-grow outline-none m-auto bg-transparent form-control text-gray-100"
+    //     style={{width:'700px'}}
+    //     type="text"
+    //     value={message}
+    //     onChange={(e)=>setMessage(e.target.value)}
+    //     placeholder={`Enter a Message ${user.getUsername()}`}
+    //   />
+    //   <button type="submit" onClick={sendMessage} className="m-auto bg-success text-white border-2 border-success">Send</button>
+    // </form>
   );
 }
 

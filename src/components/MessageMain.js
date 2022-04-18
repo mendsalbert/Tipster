@@ -2,8 +2,9 @@ import React from 'react';
 import Login from './Login';
 import Header from './Header';
 import { useMoralis } from 'react-moralis';
+import Message from './Message';
 
-const Messages = () => {
+const MessageMain = () => {
   const { isAuthenticated, logout}=useMoralis();
 
   if(!isAuthenticated){
@@ -14,10 +15,10 @@ const Messages = () => {
       <div className="h-screen overflow-y-scroll bg-gradient-to-b from-black to-sky-800 overflow-hidden">
          <div className='="max-w-screen-2xl mx-auto'>
        <Header />
-    
+        <Message />
       </div>
       </div>
     );
 }
 
-export default Messages;
+export default MessageMain;

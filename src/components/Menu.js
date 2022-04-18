@@ -2,7 +2,6 @@ import React from 'react';
 import photo from '../photo.png';
 import * as FaIcons from 'react-icons/fa';
 import * as IoIcons from 'react-icons/io';
-import { Link } from "react-router-dom";
 
 const Menu = () => {
 
@@ -29,7 +28,7 @@ return (
             <li><a href="/home"><FaIcons.FaHome size={50} className='shadow p-3' /> Home</a></li>
             <li><a href="/explore"><FaIcons.FaSearch size={50} className='shadow p-3' /> Explore</a></li>
             <li><a href="/notifications"><IoIcons.IoMdNotifications size={50} className='shadow p-3' /> Notifications</a></li>
-            <li><a href="/messages"><IoIcons.IoMdChatboxes size={50} className='shadow p-3' /> Messages</a></li>
+            <li><a href="/messagemain"><IoIcons.IoMdChatboxes size={50} className='shadow p-3' /> Messages</a></li>
             </ul>
             </div>
             </div>

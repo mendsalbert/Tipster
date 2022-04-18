@@ -8,7 +8,7 @@ import './App.css';
 import Home from './Home';
 import Explore from './Explore';
 import Notifications from './Notifications';
-import Messages from './Messages';
+import MessageMain from './MessageMain';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 //Declare IPFS
@@ -126,7 +126,7 @@ class App extends Component {
         <Route path='/home' exact element={<Home/>} />
         <Route path='/explore' exact element={<Explore/>} />
         <Route path='/notifications' exact element={<Notifications/>} />
-        <Route path='/messages' exact element={<Messages/>} />
+        <Route path='/messagemain' exact element={<MessageMain/>} />
 
       </Routes>
       {/* { this.state.loading
