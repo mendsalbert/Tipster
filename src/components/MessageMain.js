@@ -12,8 +12,8 @@ const MessageMain = () => {
   }
 
     return (
-      <div className="h-screen overflow-y-scroll bg-gradient-to-b from-black to-sky-800 overflow-hidden">
-         <div className='="max-w-screen-2xl mx-auto'>
+      <div className="overflow-hidden">
+         <div className='m-auto'>
        <Header />
         <Message />
       </div>

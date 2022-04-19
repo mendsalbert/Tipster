@@ -31,7 +31,7 @@ setMessage("");
     <main role="main" className="col-lg-12 ml-auto mr-auto" style={{ maxWidth: '700px' }}>
     <div className="content mr-auto ml-auto">
     <div className="col-lg-12 p-3 m-auto mb-3">
-        <div className="d-flex">
+        <div className="d-flex fixed-bottom m-3">
         <FormControl
             className="me-2"
             type="text"

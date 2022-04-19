@@ -21,12 +21,12 @@ function Message() {
   );
 
   return (
-    <div className="pb-56">
-      <div className="space-y-10 p-4">{data.map(messag=>(
+    <div className="pb-5">
+      <div className="p-4">{data.map(messag=>(
           <Messag key={messag.id} messag={messag}/>
       ))}</div>
      
-      <div ref={endOfMessagesRef} className="text-center m-1 text-sky-300">
+      <div ref={endOfMessagesRef} className="text-center m-1">
         <p>You're up to date {user.getUsername()}</p>
       </div>
       <div className="flex justify-center">

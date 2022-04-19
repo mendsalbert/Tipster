@@ -7,27 +7,31 @@ function Messag({ messag }) {
   const isUserMessage = messag.get("ethAddress") === user.get("ethAddress");
   return (
     <div
-      className={`flex items-end ${
+      className={`flex items-end relative ml-2 mr-2 ${
         isUserMessage && "justify-end"
       }`}
     >
         <div
-        className={`flex p-3 ml-5 text-white shadow rounded-lg ${
+        // style={{ maxWidth: '700px'}}
+        className={`p-3 ml-5 mr-5 text-white shadow rounded-lg ${
           isUserMessage
-            ? "rounded-br-none bg-success"
-            : "rounded-bl-none bg-dark"
+            ? "bg-success"
+            : "bg-dark"
         }`}
+        align={` ${ isUserMessage ? "right" : "left" }`}
       >
         <p>{messag.get("message")}</p>
       </div>
 
-      <div className={`h-8 w-8 ${isUserMessage && "order-last"}`}>
+      <div className={`relative h-2 w-2 ${isUserMessage && "order-last"}`} 
+       align={` ${ isUserMessage ? "right" : "left" }`}>
         <Avatar username={messag.get("username")} />
       </div>
       <p
-        className={`ml-2 ${
-          isUserMessage ? "text-dark" : "text-danger"
+        className={`m-auto ${
+          isUserMessage ? "text-success" : "text-dark"
         }`}
+        align={` ${ isUserMessage ? "right" : "left" }`}
       >
         {messag.get("username")}
       </p>
