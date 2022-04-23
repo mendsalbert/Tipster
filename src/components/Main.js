@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Identicon from 'identicon.js';
 import * as FaIcons from 'react-icons/fa';
-import CommentModal from './CommentModal';
+// import CommentModal from './CommentModal';
+import { RWebShare } from 'react-web-share';
 
 class Main extends Component {
 
@@ -18,9 +19,10 @@ class Main extends Component {
                 const description = this.imageDescription.value
                 this.props.uploadImage(description)
               }} >
-              <FaIcons.FaImage size={50} className='shadow p-3 mb-3 mr-3' color='#fff' />
-              <FaIcons.FaVideo size={50} className='shadow p-3 mb-3 mr-3' color='#fff' />
-              <input type='file' accept=".jpg, .jpeg, .png, .bmp, .gif, .mp4, .mkv .ogg .wmv" onChange={this.props.captureFile} />
+              <FaIcons.FaUpload size={50} className='shadow p-3 mb-3 mr-3' color='#fff' 
+              onClick={()=>{this.upload.click()}}
+              />
+              <input ref={(ref) => this.upload = ref} style={{display: 'none'}} type='file' accept=".jpg, .jpeg, .png, .bmp, .gif, .mp4, .mkv .ogg .wmv" onChange={this.props.captureFile} />
                   <div className="form-group mr-sm-2">
                     <br></br>
                       <input
@@ -28,7 +30,7 @@ class Main extends Component {
                         type="text"
                         ref={(input) => { this.imageDescription = input }}
                         className="form-control"
-                        placeholder="Caption ..."
+                        placeholder="What is happening?"
                         required />
                   </div>
                 <button type="submit" className="btn btn-success btn-block btn-lg">Post</button>
@@ -59,8 +61,18 @@ class Main extends Component {
                         <small className="float-left mt-1 text-muted">
                           TIPS: {window.web3.utils.fromWei(image.tipAmount.toString(), 'Ether')} ETH
                         </small>
-                          <CommentModal />
-                        <FaIcons.FaShare size={18} className="pt-1 ml-2" color='#00b761' />
+                          {/* <CommentModal /> */}
+                          <RWebShare
+                          data={{
+                            text: "Hi, check out this post on Tipster",
+                            url: `https://ipfs.infura.io/ipfs/${image.hash}`,
+                            title: "Tipster",
+                          }}
+                          onClick={() => console.log("shared successfully!")}
+                        >
+                          <FaIcons.FaShare size={18} className="pt-1 ml-2" color='#00b761' />
+                        </RWebShare>
+                        
                         <button
                           className="btn btn-link btn-sm float-right pt-0"
                           name={image.id}

@@ -1,19 +1,30 @@
-import Decentragram from '../abis/Decentragram.json'
+import Tipster from '../abis/Tipster.json'
 import React, { Component } from 'react';
 import Navbar from './Navbar'
 // import Main from './Main'
 import Web3 from 'web3';
+import Notify from 'bnc-notify'
 import './App.css';
 
 import Home from './Home';
-import Explore from './Explore';
-import Notifications from './Notifications';
+// import Explore from './Explore';
+// import Notifications from './Notifications';
 import MessageMain from './MessageMain';
+import GroupMain from './GroupMain';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 //Declare IPFS
 const ipfsClient = require('ipfs-http-client')
 const ipfs = ipfsClient({ host: 'ipfs.infura.io', port: 5001, protocol: 'https' }) // leaving out the arguments will default to these values
+
+const options = {
+  dappId: '07dd3134-f6e3-4fa1-8300-c06eb7fc0e72',
+  networkId: 1,
+  darkMode: true,
+}
+
+// initialize notify
+const notify = Notify(options)
 
 class App extends Component {
 
@@ -42,15 +53,15 @@ class App extends Component {
     this.setState({ account: accounts[0] })
     // Network ID
     const networkId = await web3.eth.net.getId()
-    const networkData = Decentragram.networks[networkId]
+    const networkData = Tipster.networks[networkId]
     if(networkData) {
-      const decentragram = new web3.eth.Contract(Decentragram.abi, networkData.address)
-      this.setState({ decentragram })
-      const imagesCount = await decentragram.methods.imageCount().call()
+      const tipster = new web3.eth.Contract(Tipster.abi, networkData.address)
+      this.setState({ tipster })
+      const imagesCount = await tipster.methods.imageCount().call()
       this.setState({ imagesCount })
       // Load images
       for (var i = 1; i <= imagesCount; i++) {
-        const image = await decentragram.methods.images(i).call()
+        const image = await tipster.methods.images(i).call()
         this.setState({
           images: [...this.state.images, image]
         })
@@ -61,7 +72,7 @@ class App extends Component {
       })
       this.setState({ loading: false})
     } else {
-      window.alert('Decentragram contract not deployed to detected network.')
+      window.alert('Tipster contract not deployed to detected network.')
     }
   }
 
@@ -90,16 +101,38 @@ class App extends Component {
       }
 
       this.setState({ loading: true })
-      this.state.decentragram.methods.uploadImage(result[0].hash, description).send({ from: this.state.account }).on('transactionHash', (hash) => {
+      this.state.tipster.methods.uploadImage(result[0].hash, description).send({ from: this.state.account }).on('transactionHash', (hash) => {
         this.setState({ loading: false })
+        // pass the hash to notify.hash function for transaction updates and notifications
+        const { emitter } = notify.hash(hash)
+
+        // use emitter to listen to transaction events
+        emitter.on('txSent', console.log)
+        emitter.on('txPool', console.log)
+        emitter.on('txConfirmed', console.log)
+        emitter.on('txSpeedUp', console.log)
+        emitter.on('txCancel', console.log)
+        emitter.on('txFailed', console.log)
+        emitter.on('all', console.log)
       })
     })
   }
 
   tipImageOwner(id, tipAmount) {
     this.setState({ loading: true })
-    this.state.decentragram.methods.tipImageOwner(id).send({ from: this.state.account, value: tipAmount }).on('transactionHash', (hash) => {
+    this.state.tipster.methods.tipImageOwner(id).send({ from: this.state.account, value: tipAmount }).on('transactionHash', (hash) => {
       this.setState({ loading: false })
+      // pass the hash to notify.hash function for transaction updates and notifications
+        const { emitter } = notify.hash(hash)
+
+        // use emitter to listen to transaction events
+        emitter.on('txSent', console.log)
+        emitter.on('txPool', console.log)
+        emitter.on('txConfirmed', console.log)
+        emitter.on('txSpeedUp', console.log)
+        emitter.on('txCancel', console.log)
+        emitter.on('txFailed', console.log)
+        emitter.on('all', console.log)
     })
   }
 
@@ -107,7 +140,7 @@ class App extends Component {
     super(props)
     this.state = {
       account: '',
-      decentragram: null,
+      tipster: null,
       images: [],
       loading: true
     }
@@ -124,20 +157,12 @@ class App extends Component {
         <Navbar account={this.state.account} />
         <Routes>
         <Route path='/home' exact element={<Home/>} />
-        <Route path='/explore' exact element={<Explore/>} />
-        <Route path='/notifications' exact element={<Notifications/>} />
-        <Route path='/messagemain' exact element={<MessageMain/>} />
+        {/* <Route path='/explore' element={<Explore/>} />
+        <Route path='/notifications' element={<Notifications/>} /> */}
+        <Route path='/messagemain' element={<MessageMain/>} />
+        <Route path='/groupmain' element={<GroupMain/>} />
 
       </Routes>
-      {/* { this.state.loading
-          ? <div id="loader" className="text-center mt-5"><p>Loading...</p></div>
-          : <Main
-              images={this.state.images}
-              captureFile={this.captureFile}
-              uploadImage={this.uploadImage}
-              tipImageOwner={this.tipImageOwner}
-            />
-        } */}
         
       </Router>
       </div>

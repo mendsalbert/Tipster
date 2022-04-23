@@ -23,11 +23,11 @@ return (
                 <button type="button" className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div className="offcanvas-body">
-            <h5 className='ml-3'>0 Following  0 Followers</h5>
+            {/* <h5 className='ml-3'>0 Following  0 Followers</h5> */}
             <ul>
             <li><a href="/home"><FaIcons.FaHome size={50} className='shadow p-3' /> Home</a></li>
-            <li><a href="/explore"><FaIcons.FaSearch size={50} className='shadow p-3' /> Explore</a></li>
-            <li><a href="/notifications"><IoIcons.IoMdNotifications size={50} className='shadow p-3' /> Notifications</a></li>
+            {/* <li><a href="/explore"><FaIcons.FaSearch size={50} className='shadow p-3' /> Explore</a></li>
+            <li><a href="/notifications"><IoIcons.IoMdNotifications size={50} className='shadow p-3' /> Notifications</a></li> */}
             <li><a href="/messagemain"><IoIcons.IoMdChatboxes size={50} className='shadow p-3' /> Messages</a></li>
             </ul>
             </div>

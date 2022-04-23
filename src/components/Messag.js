@@ -12,13 +12,13 @@ function Messag({ messag }) {
       }`}
     >
         <div
-        // style={{ maxWidth: '700px'}}
         className={`p-3 ml-5 mr-5 text-white shadow rounded-lg ${
           isUserMessage
             ? "bg-success"
             : "bg-dark"
         }`}
         align={` ${ isUserMessage ? "right" : "left" }`}
+        // style={{width:'fit-content'}}
       >
         <p>{messag.get("message")}</p>
       </div>
