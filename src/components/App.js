@@ -19,7 +19,7 @@ const ipfs = ipfsClient({ host: 'ipfs.infura.io', port: 5001, protocol: 'https' 
 
 const options = {
   dappId: '07dd3134-f6e3-4fa1-8300-c06eb7fc0e72',
-  networkId: 1,
+  networkId: 3,
   darkMode: true,
 }
 
