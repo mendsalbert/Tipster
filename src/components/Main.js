@@ -81,6 +81,8 @@ class Main extends Component {
                       <li className="list-group-item">
                         <div className="text-center">
                           <iframe
+                            key={1}
+                            title="title"
                             src={`https://ipfs.infura.io/ipfs/${image.hash}`}
                           ></iframe>
                         </div>
