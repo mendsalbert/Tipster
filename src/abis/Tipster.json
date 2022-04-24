@@ -198,21 +198,14 @@
   "ast": {
     "absolutePath": "project:/src/contracts/Tipster.sol",
     "exportedSymbols": {
-      "Tipster": [
-        233
-      ]
+      "Tipster": [233]
     },
     "id": 234,
     "nodeType": "SourceUnit",
     "nodes": [
       {
         "id": 58,
-        "literals": [
-          "solidity",
-          "^",
-          "0.5",
-          ".0"
-        ],
+        "literals": ["solidity", "^", "0.5", ".0"],
         "nodeType": "PragmaDirective",
         "src": "0:23:1"
       },
@@ -223,9 +216,7 @@
         "documentation": null,
         "fullyImplemented": true,
         "id": 233,
-        "linearizedBaseContracts": [
-          233
-        ],
+        "linearizedBaseContracts": [233],
         "name": "Tipster",
         "nodeType": "ContractDefinition",
         "nodes": [
@@ -998,10 +989,7 @@
                       "id": 117,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        251,
-                        252
-                      ],
+                      "overloadedDeclarations": [251, 252],
                       "referencedDeclaration": 251,
                       "src": "736:7:1",
                       "typeDescriptions": {
@@ -1146,10 +1134,7 @@
                       "id": 126,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        251,
-                        252
-                      ],
+                      "overloadedDeclarations": [251, 252],
                       "referencedDeclaration": 251,
                       "src": "821:7:1",
                       "typeDescriptions": {
@@ -1294,10 +1279,7 @@
                       "id": 135,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        251,
-                        252
-                      ],
+                      "overloadedDeclarations": [251, 252],
                       "referencedDeclaration": 251,
                       "src": "909:7:1",
                       "typeDescriptions": {
@@ -1913,10 +1895,7 @@
                       "id": 175,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        251,
-                        252
-                      ],
+                      "overloadedDeclarations": [251, 252],
                       "referencedDeclaration": 251,
                       "src": "1310:7:1",
                       "typeDescriptions": {
@@ -1943,9 +1922,7 @@
                   "src": "1310:37:1"
                 },
                 {
-                  "assignments": [
-                    186
-                  ],
+                  "assignments": [186],
                   "declarations": [
                     {
                       "constant": false,
@@ -2021,9 +1998,7 @@
                   "src": "1378:33:1"
                 },
                 {
-                  "assignments": [
-                    192
-                  ],
+                  "assignments": [192],
                   "declarations": [
                     {
                       "constant": false,
@@ -2644,20 +2619,13 @@
     "attributes": {
       "absolutePath": "project:/src/contracts/Tipster.sol",
       "exportedSymbols": {
-        "Tipster": [
-          233
-        ]
+        "Tipster": [233]
       }
     },
     "children": [
       {
         "attributes": {
-          "literals": [
-            "solidity",
-            "^",
-            "0.5",
-            ".0"
-          ]
+          "literals": ["solidity", "^", "0.5", ".0"]
         },
         "id": 58,
         "name": "PragmaDirective",
@@ -2665,18 +2633,12 @@
       },
       {
         "attributes": {
-          "baseContracts": [
-            null
-          ],
-          "contractDependencies": [
-            null
-          ],
+          "baseContracts": [null],
+          "contractDependencies": [null],
           "contractKind": "contract",
           "documentation": null,
           "fullyImplemented": true,
-          "linearizedBaseContracts": [
-            233
-          ],
+          "linearizedBaseContracts": [233],
           "name": "Tipster",
           "scope": 234
         },
@@ -3256,9 +3218,7 @@
               "implemented": true,
               "isConstructor": true,
               "kind": "constructor",
-              "modifiers": [
-                null
-              ],
+              "modifiers": [null],
               "name": "",
               "scope": 233,
               "stateMutability": "nonpayable",
@@ -3268,9 +3228,7 @@
             "children": [
               {
                 "attributes": {
-                  "parameters": [
-                    null
-                  ]
+                  "parameters": [null]
                 },
                 "children": [],
                 "id": 103,
@@ -3279,9 +3237,7 @@
               },
               {
                 "attributes": {
-                  "parameters": [
-                    null
-                  ]
+                  "parameters": [null]
                 },
                 "children": [],
                 "id": 104,
@@ -3306,9 +3262,7 @@
                           {
                             "attributes": {
                               "argumentTypes": null,
-                              "overloadedDeclarations": [
-                                null
-                              ],
+                              "overloadedDeclarations": [null],
                               "referencedDeclaration": 60,
                               "type": "string storage ref",
                               "value": "name"
@@ -3360,9 +3314,7 @@
               "implemented": true,
               "isConstructor": false,
               "kind": "function",
-              "modifiers": [
-                null
-              ],
+              "modifiers": [null],
               "name": "uploadImage",
               "scope": 233,
               "stateMutability": "nonpayable",
@@ -3431,9 +3383,7 @@
               },
               {
                 "attributes": {
-                  "parameters": [
-                    null
-                  ]
+                  "parameters": [null]
                 },
                 "children": [],
                 "id": 116,
@@ -3452,9 +3402,7 @@
                           "isPure": false,
                           "isStructConstructorCall": false,
                           "lValueRequested": false,
-                          "names": [
-                            null
-                          ],
+                          "names": [null],
                           "type": "tuple()",
                           "type_conversion": false
                         },
@@ -3467,10 +3415,7 @@
                                   "typeString": "bool"
                                 }
                               ],
-                              "overloadedDeclarations": [
-                                251,
-                                252
-                              ],
+                              "overloadedDeclarations": [251, 252],
                               "referencedDeclaration": 251,
                               "type": "function (bool) pure",
                               "value": "require"
@@ -3514,9 +3459,7 @@
                                       "isPure": false,
                                       "isStructConstructorCall": false,
                                       "lValueRequested": false,
-                                      "names": [
-                                        null
-                                      ],
+                                      "names": [null],
                                       "type": "bytes memory",
                                       "type_conversion": true
                                     },
@@ -3543,9 +3486,7 @@
                                       {
                                         "attributes": {
                                           "argumentTypes": null,
-                                          "overloadedDeclarations": [
-                                            null
-                                          ],
+                                          "overloadedDeclarations": [null],
                                           "referencedDeclaration": 112,
                                           "type": "string memory",
                                           "value": "_imgHash"
@@ -3606,9 +3547,7 @@
                           "isPure": false,
                           "isStructConstructorCall": false,
                           "lValueRequested": false,
-                          "names": [
-                            null
-                          ],
+                          "names": [null],
                           "type": "tuple()",
                           "type_conversion": false
                         },
@@ -3621,10 +3560,7 @@
                                   "typeString": "bool"
                                 }
                               ],
-                              "overloadedDeclarations": [
-                                251,
-                                252
-                              ],
+                              "overloadedDeclarations": [251, 252],
                               "referencedDeclaration": 251,
                               "type": "function (bool) pure",
                               "value": "require"
@@ -3668,9 +3604,7 @@
                                       "isPure": false,
                                       "isStructConstructorCall": false,
                                       "lValueRequested": false,
-                                      "names": [
-                                        null
-                                      ],
+                                      "names": [null],
                                       "type": "bytes memory",
                                       "type_conversion": true
                                     },
@@ -3697,9 +3631,7 @@
                                       {
                                         "attributes": {
                                           "argumentTypes": null,
-                                          "overloadedDeclarations": [
-                                            null
-                                          ],
+                                          "overloadedDeclarations": [null],
                                           "referencedDeclaration": 114,
                                           "type": "string memory",
                                           "value": "_description"
@@ -3760,9 +3692,7 @@
                           "isPure": false,
                           "isStructConstructorCall": false,
                           "lValueRequested": false,
-                          "names": [
-                            null
-                          ],
+                          "names": [null],
                           "type": "tuple()",
                           "type_conversion": false
                         },
@@ -3775,10 +3705,7 @@
                                   "typeString": "bool"
                                 }
                               ],
-                              "overloadedDeclarations": [
-                                251,
-                                252
-                              ],
+                              "overloadedDeclarations": [251, 252],
                               "referencedDeclaration": 251,
                               "type": "function (bool) pure",
                               "value": "require"
@@ -3817,9 +3744,7 @@
                                   {
                                     "attributes": {
                                       "argumentTypes": null,
-                                      "overloadedDeclarations": [
-                                        null
-                                      ],
+                                      "overloadedDeclarations": [null],
                                       "referencedDeclaration": 248,
                                       "type": "msg",
                                       "value": "msg"
@@ -3841,9 +3766,7 @@
                                   "isPure": true,
                                   "isStructConstructorCall": false,
                                   "lValueRequested": false,
-                                  "names": [
-                                    null
-                                  ],
+                                  "names": [null],
                                   "type": "address payable",
                                   "type_conversion": true
                                 },
@@ -3921,9 +3844,7 @@
                           {
                             "attributes": {
                               "argumentTypes": null,
-                              "overloadedDeclarations": [
-                                null
-                              ],
+                              "overloadedDeclarations": [null],
                               "referencedDeclaration": 63,
                               "type": "uint256",
                               "value": "imageCount"
@@ -3968,9 +3889,7 @@
                               {
                                 "attributes": {
                                   "argumentTypes": null,
-                                  "overloadedDeclarations": [
-                                    null
-                                  ],
+                                  "overloadedDeclarations": [null],
                                   "referencedDeclaration": 67,
                                   "type": "mapping(uint256 => struct Tipster.Image storage ref)",
                                   "value": "images"
@@ -3982,9 +3901,7 @@
                               {
                                 "attributes": {
                                   "argumentTypes": null,
-                                  "overloadedDeclarations": [
-                                    null
-                                  ],
+                                  "overloadedDeclarations": [null],
                                   "referencedDeclaration": 63,
                                   "type": "uint256",
                                   "value": "imageCount"
@@ -4006,9 +3923,7 @@
                               "isPure": false,
                               "isStructConstructorCall": true,
                               "lValueRequested": false,
-                              "names": [
-                                null
-                              ],
+                              "names": [null],
                               "type": "struct Tipster.Image memory",
                               "type_conversion": false
                             },
@@ -4037,9 +3952,7 @@
                                       "typeString": "address payable"
                                     }
                                   ],
-                                  "overloadedDeclarations": [
-                                    null
-                                  ],
+                                  "overloadedDeclarations": [null],
                                   "referencedDeclaration": 78,
                                   "type": "type(struct Tipster.Image storage pointer)",
                                   "value": "Image"
@@ -4051,9 +3964,7 @@
                               {
                                 "attributes": {
                                   "argumentTypes": null,
-                                  "overloadedDeclarations": [
-                                    null
-                                  ],
+                                  "overloadedDeclarations": [null],
                                   "referencedDeclaration": 63,
                                   "type": "uint256",
                                   "value": "imageCount"
@@ -4065,9 +3976,7 @@
                               {
                                 "attributes": {
                                   "argumentTypes": null,
-                                  "overloadedDeclarations": [
-                                    null
-                                  ],
+                                  "overloadedDeclarations": [null],
                                   "referencedDeclaration": 112,
                                   "type": "string memory",
                                   "value": "_imgHash"
@@ -4079,9 +3988,7 @@
                               {
                                 "attributes": {
                                   "argumentTypes": null,
-                                  "overloadedDeclarations": [
-                                    null
-                                  ],
+                                  "overloadedDeclarations": [null],
                                   "referencedDeclaration": 114,
                                   "type": "string memory",
                                   "value": "_description"
@@ -4122,9 +4029,7 @@
                                   {
                                     "attributes": {
                                       "argumentTypes": null,
-                                      "overloadedDeclarations": [
-                                        null
-                                      ],
+                                      "overloadedDeclarations": [null],
                                       "referencedDeclaration": 248,
                                       "type": "msg",
                                       "value": "msg"
@@ -4163,9 +4068,7 @@
                           "isPure": false,
                           "isStructConstructorCall": false,
                           "lValueRequested": false,
-                          "names": [
-                            null
-                          ],
+                          "names": [null],
                           "type": "tuple()",
                           "type_conversion": false
                         },
@@ -4194,9 +4097,7 @@
                                   "typeString": "address payable"
                                 }
                               ],
-                              "overloadedDeclarations": [
-                                null
-                              ],
+                              "overloadedDeclarations": [null],
                               "referencedDeclaration": 90,
                               "type": "function (uint256,string memory,string memory,uint256,address payable)",
                               "value": "ImageCreated"
@@ -4208,9 +4109,7 @@
                           {
                             "attributes": {
                               "argumentTypes": null,
-                              "overloadedDeclarations": [
-                                null
-                              ],
+                              "overloadedDeclarations": [null],
                               "referencedDeclaration": 63,
                               "type": "uint256",
                               "value": "imageCount"
@@ -4222,9 +4121,7 @@
                           {
                             "attributes": {
                               "argumentTypes": null,
-                              "overloadedDeclarations": [
-                                null
-                              ],
+                              "overloadedDeclarations": [null],
                               "referencedDeclaration": 112,
                               "type": "string memory",
                               "value": "_imgHash"
@@ -4236,9 +4133,7 @@
                           {
                             "attributes": {
                               "argumentTypes": null,
-                              "overloadedDeclarations": [
-                                null
-                              ],
+                              "overloadedDeclarations": [null],
                               "referencedDeclaration": 114,
                               "type": "string memory",
                               "value": "_description"
@@ -4279,9 +4174,7 @@
                               {
                                 "attributes": {
                                   "argumentTypes": null,
-                                  "overloadedDeclarations": [
-                                    null
-                                  ],
+                                  "overloadedDeclarations": [null],
                                   "referencedDeclaration": 248,
                                   "type": "msg",
                                   "value": "msg"
@@ -4321,9 +4214,7 @@
               "implemented": true,
               "isConstructor": false,
               "kind": "function",
-              "modifiers": [
-                null
-              ],
+              "modifiers": [null],
               "name": "tipImageOwner",
               "scope": 233,
               "stateMutability": "payable",
@@ -4366,9 +4257,7 @@
               },
               {
                 "attributes": {
-                  "parameters": [
-                    null
-                  ]
+                  "parameters": [null]
                 },
                 "children": [],
                 "id": 174,
@@ -4387,9 +4276,7 @@
                           "isPure": false,
                           "isStructConstructorCall": false,
                           "lValueRequested": false,
-                          "names": [
-                            null
-                          ],
+                          "names": [null],
                           "type": "tuple()",
                           "type_conversion": false
                         },
@@ -4402,10 +4289,7 @@
                                   "typeString": "bool"
                                 }
                               ],
-                              "overloadedDeclarations": [
-                                251,
-                                252
-                              ],
+                              "overloadedDeclarations": [251, 252],
                               "referencedDeclaration": 251,
                               "type": "function (bool) pure",
                               "value": "require"
@@ -4447,9 +4331,7 @@
                                   {
                                     "attributes": {
                                       "argumentTypes": null,
-                                      "overloadedDeclarations": [
-                                        null
-                                      ],
+                                      "overloadedDeclarations": [null],
                                       "referencedDeclaration": 172,
                                       "type": "uint256",
                                       "value": "_id"
@@ -4498,9 +4380,7 @@
                                   {
                                     "attributes": {
                                       "argumentTypes": null,
-                                      "overloadedDeclarations": [
-                                        null
-                                      ],
+                                      "overloadedDeclarations": [null],
                                       "referencedDeclaration": 172,
                                       "type": "uint256",
                                       "value": "_id"
@@ -4512,9 +4392,7 @@
                                   {
                                     "attributes": {
                                       "argumentTypes": null,
-                                      "overloadedDeclarations": [
-                                        null
-                                      ],
+                                      "overloadedDeclarations": [null],
                                       "referencedDeclaration": 63,
                                       "type": "uint256",
                                       "value": "imageCount"
@@ -4545,9 +4423,7 @@
                   },
                   {
                     "attributes": {
-                      "assignments": [
-                        186
-                      ]
+                      "assignments": [186]
                     },
                     "children": [
                       {
@@ -4591,9 +4467,7 @@
                           {
                             "attributes": {
                               "argumentTypes": null,
-                              "overloadedDeclarations": [
-                                null
-                              ],
+                              "overloadedDeclarations": [null],
                               "referencedDeclaration": 67,
                               "type": "mapping(uint256 => struct Tipster.Image storage ref)",
                               "value": "images"
@@ -4605,9 +4479,7 @@
                           {
                             "attributes": {
                               "argumentTypes": null,
-                              "overloadedDeclarations": [
-                                null
-                              ],
+                              "overloadedDeclarations": [null],
                               "referencedDeclaration": 172,
                               "type": "uint256",
                               "value": "_id"
@@ -4628,9 +4500,7 @@
                   },
                   {
                     "attributes": {
-                      "assignments": [
-                        192
-                      ]
+                      "assignments": [192]
                     },
                     "children": [
                       {
@@ -4675,9 +4545,7 @@
                           {
                             "attributes": {
                               "argumentTypes": null,
-                              "overloadedDeclarations": [
-                                null
-                              ],
+                              "overloadedDeclarations": [null],
                               "referencedDeclaration": 186,
                               "type": "struct Tipster.Image memory",
                               "value": "_image"
@@ -4706,9 +4574,7 @@
                           "isPure": false,
                           "isStructConstructorCall": false,
                           "lValueRequested": false,
-                          "names": [
-                            null
-                          ],
+                          "names": [null],
                           "type": "tuple()",
                           "type_conversion": false
                         },
@@ -4738,9 +4604,7 @@
                                   "isPure": false,
                                   "isStructConstructorCall": false,
                                   "lValueRequested": false,
-                                  "names": [
-                                    null
-                                  ],
+                                  "names": [null],
                                   "type": "address payable",
                                   "type_conversion": true
                                 },
@@ -4767,9 +4631,7 @@
                                   {
                                     "attributes": {
                                       "argumentTypes": null,
-                                      "overloadedDeclarations": [
-                                        null
-                                      ],
+                                      "overloadedDeclarations": [null],
                                       "referencedDeclaration": 192,
                                       "type": "address payable",
                                       "value": "_author"
@@ -4803,9 +4665,7 @@
                               {
                                 "attributes": {
                                   "argumentTypes": null,
-                                  "overloadedDeclarations": [
-                                    null
-                                  ],
+                                  "overloadedDeclarations": [null],
                                   "referencedDeclaration": 248,
                                   "type": "msg",
                                   "value": "msg"
@@ -4857,9 +4717,7 @@
                               {
                                 "attributes": {
                                   "argumentTypes": null,
-                                  "overloadedDeclarations": [
-                                    null
-                                  ],
+                                  "overloadedDeclarations": [null],
                                   "referencedDeclaration": 186,
                                   "type": "struct Tipster.Image memory",
                                   "value": "_image"
@@ -4903,9 +4761,7 @@
                                   {
                                     "attributes": {
                                       "argumentTypes": null,
-                                      "overloadedDeclarations": [
-                                        null
-                                      ],
+                                      "overloadedDeclarations": [null],
                                       "referencedDeclaration": 186,
                                       "type": "struct Tipster.Image memory",
                                       "value": "_image"
@@ -4934,9 +4790,7 @@
                                   {
                                     "attributes": {
                                       "argumentTypes": null,
-                                      "overloadedDeclarations": [
-                                        null
-                                      ],
+                                      "overloadedDeclarations": [null],
                                       "referencedDeclaration": 248,
                                       "type": "msg",
                                       "value": "msg"
@@ -4991,9 +4845,7 @@
                               {
                                 "attributes": {
                                   "argumentTypes": null,
-                                  "overloadedDeclarations": [
-                                    null
-                                  ],
+                                  "overloadedDeclarations": [null],
                                   "referencedDeclaration": 67,
                                   "type": "mapping(uint256 => struct Tipster.Image storage ref)",
                                   "value": "images"
@@ -5005,9 +4857,7 @@
                               {
                                 "attributes": {
                                   "argumentTypes": null,
-                                  "overloadedDeclarations": [
-                                    null
-                                  ],
+                                  "overloadedDeclarations": [null],
                                   "referencedDeclaration": 172,
                                   "type": "uint256",
                                   "value": "_id"
@@ -5024,9 +4874,7 @@
                           {
                             "attributes": {
                               "argumentTypes": null,
-                              "overloadedDeclarations": [
-                                null
-                              ],
+                              "overloadedDeclarations": [null],
                               "referencedDeclaration": 186,
                               "type": "struct Tipster.Image memory",
                               "value": "_image"
@@ -5055,9 +4903,7 @@
                           "isPure": false,
                           "isStructConstructorCall": false,
                           "lValueRequested": false,
-                          "names": [
-                            null
-                          ],
+                          "names": [null],
                           "type": "tuple()",
                           "type_conversion": false
                         },
@@ -5086,9 +4932,7 @@
                                   "typeString": "address payable"
                                 }
                               ],
-                              "overloadedDeclarations": [
-                                null
-                              ],
+                              "overloadedDeclarations": [null],
                               "referencedDeclaration": 102,
                               "type": "function (uint256,string memory,string memory,uint256,address payable)",
                               "value": "ImageTipped"
@@ -5100,9 +4944,7 @@
                           {
                             "attributes": {
                               "argumentTypes": null,
-                              "overloadedDeclarations": [
-                                null
-                              ],
+                              "overloadedDeclarations": [null],
                               "referencedDeclaration": 172,
                               "type": "uint256",
                               "value": "_id"
@@ -5126,9 +4968,7 @@
                               {
                                 "attributes": {
                                   "argumentTypes": null,
-                                  "overloadedDeclarations": [
-                                    null
-                                  ],
+                                  "overloadedDeclarations": [null],
                                   "referencedDeclaration": 186,
                                   "type": "struct Tipster.Image memory",
                                   "value": "_image"
@@ -5157,9 +4997,7 @@
                               {
                                 "attributes": {
                                   "argumentTypes": null,
-                                  "overloadedDeclarations": [
-                                    null
-                                  ],
+                                  "overloadedDeclarations": [null],
                                   "referencedDeclaration": 186,
                                   "type": "struct Tipster.Image memory",
                                   "value": "_image"
@@ -5188,9 +5026,7 @@
                               {
                                 "attributes": {
                                   "argumentTypes": null,
-                                  "overloadedDeclarations": [
-                                    null
-                                  ],
+                                  "overloadedDeclarations": [null],
                                   "referencedDeclaration": 186,
                                   "type": "struct Tipster.Image memory",
                                   "value": "_image"
@@ -5207,9 +5043,7 @@
                           {
                             "attributes": {
                               "argumentTypes": null,
-                              "overloadedDeclarations": [
-                                null
-                              ],
+                              "overloadedDeclarations": [null],
                               "referencedDeclaration": 192,
                               "type": "address payable",
                               "value": "_author"
@@ -5416,14 +5250,9 @@
       "transactionHash": "0x07201a0f8842653acd5c53cc6903f7e558ea9a014b724f199e45ec1dd8fa4694"
     }
   },
-<<<<<<< HEAD
-  "schemaVersion": "3.4.4",
-  "updatedAt": "2022-04-23T23:07:43.538Z",
-=======
   "schemaVersion": "3.2.3",
   "updatedAt": "2022-04-24T00:46:53.831Z",
   "networkType": "ethereum",
->>>>>>> d923f675e5c61b66294c743849b4d1f2da202576
   "devdoc": {
     "methods": {}
   },
