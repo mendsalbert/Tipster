@@ -8,6 +8,7 @@ function Avatar({username,logoutOnPress}) {
         src={`https://avatars.dicebear.com/api/pixel-art/${username || user.get("username")}.svg`}
         width='60'
         height='60'
+        alt='alt'
         onClick={()=> logoutOnPress && logout()}
     />)
 }

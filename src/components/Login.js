@@ -15,6 +15,7 @@ function Login() {
                   className="item-center"
                   width='35'
                   height='35'
+                  alt='alt'
                /></button>
             </div>
         </div>

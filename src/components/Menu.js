@@ -1,41 +1,73 @@
-import React from 'react';
-import photo from '../photo.png';
-import * as FaIcons from 'react-icons/fa';
-import * as IoIcons from 'react-icons/io';
+import React from "react";
+import photo from "../photo.png";
+import * as FaIcons from "react-icons/fa";
+import * as IoIcons from "react-icons/io";
 
 const Menu = () => {
-
-return (
+  return (
     <div>
-            
-            <button className="btn ml-3 bg-white text-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Menu</button>
-         
-            <div className="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
-            <div className="offcanvas-header">
-                <h5 className="offcanvas-title" id="offcanvasWithBothOptionsLabel"><a
-          className="navbar-brand col-sm-3 col-md-2 mr-0"
-          href="/home"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src={photo} width="60" height="60" className="d-inline-block align-top" alt="" />
-        </a></h5>
-                <button type="button" className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div className="offcanvas-body">
-            {/* <h5 className='ml-3'>0 Following  0 Followers</h5> */}
-            <ul>
-            <li><a href="/home"><FaIcons.FaHome size={50} className='shadow p-3' /> Home</a></li>
+      <button
+        className="btn ml-3 bg-white text-dark"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasWithBothOptions"
+        aria-controls="offcanvasWithBothOptions"
+      >
+        Menu
+      </button>
+
+      <div
+        className="offcanvas offcanvas-start"
+        data-bs-scroll="true"
+        tabindex="-1"
+        id="offcanvasWithBothOptions"
+        aria-labelledby="offcanvasWithBothOptionsLabel"
+      >
+        <div className="offcanvas-header">
+          <h5 className="offcanvas-title" id="offcanvasWithBothOptionsLabel">
+            <a
+              className="navbar-brand col-sm-3 col-md-2 mr-0"
+              href="/home"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={photo}
+                width="60"
+                height="60"
+                className="d-inline-block align-top"
+                alt="alt"
+              />
+            </a>
+          </h5>
+          <button
+            type="button"
+            className="btn-close text-reset"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div className="offcanvas-body">
+          {/* <h5 className='ml-3'>0 Following  0 Followers</h5> */}
+          <ul>
+            <li>
+              <a href="/home">
+                <FaIcons.FaHome size={50} className="shadow p-3" /> Home
+              </a>
+            </li>
             {/* <li><a href="/explore"><FaIcons.FaSearch size={50} className='shadow p-3' /> Explore</a></li>
             <li><a href="/notifications"><IoIcons.IoMdNotifications size={50} className='shadow p-3' /> Notifications</a></li> */}
-            <li><a href="/messagemain"><IoIcons.IoMdChatboxes size={50} className='shadow p-3' /> Messages</a></li>
-            </ul>
-            </div>
-            </div>
-
+            <li>
+              <a href="/messagemain">
+                <IoIcons.IoMdChatboxes size={50} className="shadow p-3" />{" "}
+                Messages
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
-
-)
-}
+  );
+};
 
 export default Menu;

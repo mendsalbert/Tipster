@@ -53,5 +53,8 @@
   ],
   "devDependencies": {
     "gh-pages": "^2.2.0"
-  }
+  },
+  "main": "index.js",
+  "repository": "git@github.com:Brilliant497705/Tipster.git",
+  "license": "MIT"
 }

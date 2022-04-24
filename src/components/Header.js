@@ -14,6 +14,7 @@ function Header() {
                     width='100'
                     height='100'
                     src="/logo.png"
+                    alt=''
                     />
                 </div>
                 <div className="col" align='center'>
