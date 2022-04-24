@@ -27,7 +27,7 @@ const Menu = () => {
           <h5 className="offcanvas-title" id="offcanvasWithBothOptionsLabel">
             <a
               className="navbar-brand col-sm-3 col-md-2 mr-0"
-              href="/home"
+              href="/"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -36,7 +36,7 @@ const Menu = () => {
                 width="60"
                 height="60"
                 className="d-inline-block align-top"
-                alt="alt"
+                alt=""
               />
             </a>
           </h5>
@@ -51,7 +51,7 @@ const Menu = () => {
           {/* <h5 className='ml-3'>0 Following  0 Followers</h5> */}
           <ul>
             <li>
-              <a href="/home">
+              <a href="/">
                 <FaIcons.FaHome size={50} className="shadow p-3" /> Home
               </a>
             </li>

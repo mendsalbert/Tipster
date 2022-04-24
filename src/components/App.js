@@ -19,7 +19,7 @@ const ipfs = ipfsClient({ host: 'ipfs.infura.io', port: 5001, protocol: 'https' 
 
 const options = {
   dappId: '07dd3134-f6e3-4fa1-8300-c06eb7fc0e72',
-  networkId: 1,
+  networkId: 3,
   darkMode: true,
 }
 
@@ -156,7 +156,7 @@ class App extends Component {
         <Router>
         <Navbar account={this.state.account} />
         <Routes>
-        <Route path='/home' exact element={<Home/>} />
+        <Route path='/' exact element={<Home/>} />
         {/* <Route path='/explore' element={<Explore/>} />
         <Route path='/notifications' element={<Notifications/>} /> */}
         <Route path='/messagemain' element={<MessageMain/>} />
