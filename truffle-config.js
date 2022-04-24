@@ -2,7 +2,7 @@ require('babel-register');
 require('babel-polyfill');
 
 const HDWalletProvider = require("truffle-hdwallet-provider");
-const mnemonic = 'alley fault task tourist token age trip reform protect success sail spot'; 
+
 
 module.exports = {
   networks: {
